@@ -52,21 +52,53 @@ module cuenta::Granja {
         let cultivos = empty<TipoCultivo>();
         let cultivo1 = TipoCultivo { tipo: utf8(b"Maiz"), precio: 25};
         push_back(&mut cultivos, cultivo1);
-        cultivo1 = TipoCultivo { tipo: utf8(b"Arroz"), precio: 50};
-        push_back(&mut cultivos, cultivo1);
-        let TipoCultivo {tipo, precio } = *borrow(&cultivos, i);
+        let cultivo2 = TipoCultivo { tipo: utf8(b"Arroz"), precio: 50};
+        push_back(&mut cultivos, cultivo2);
+        let cultivo3 = TipoCultivo { tipo: utf8(b"Trigo"), precio: 75};
+        push_back(&mut cultivos, cultivo3);
+        let cultivo4 = TipoCultivo { tipo: utf8(b"Avena"), precio: 100};
+        push_back(&mut cultivos, cultivo4);
+        let cultivo5 = TipoCultivo { tipo: utf8(b"Cebada"), precio: 125};
+        push_back(&mut cultivos, cultivo5);
+        let cultivo6 = TipoCultivo { tipo: utf8(b"Soya"), precio: 150};
+        push_back(&mut cultivos, cultivo6);
+        let cultivo7 = TipoCultivo { tipo: utf8(b"Girasol"), precio: 175};
+        push_back(&mut cultivos, cultivo7);
+        let cultivo8 = TipoCultivo { tipo: utf8(b"Algodon"), precio: 200};
+        push_back(&mut cultivos, cultivo8);
+        let cultivo9 = TipoCultivo { tipo: utf8(b"Papa"), precio: 225};
+        push_back(&mut cultivos, cultivo9);
+        let cultivo10 = TipoCultivo { tipo: utf8(b"Fresas"), precio: 250};
+        push_back(&mut cultivos, cultivo10);
+        let TipoCultivo { tipo, precio } = *borrow(&cultivos, i);
         (tipo, precio)
     }
 
     // inicializa los tipos de ganado
     fun Tipo_ganado(i: u64): (String, u64) {
         let ganados = empty<TipoGanado>();
-        let ganado1 = TipoGanado { tipo: utf8(b"Conejo"), precio: 10};
+        let ganado1 = TipoGanado { tipo: utf8(b"Gallina"), precio: 6};
         push_back(&mut ganados, ganado1);
-        let ganado2 = TipoGanado { tipo: utf8(b"Obeja"), precio: 35};
+        let ganado2 =  utf8(b"Conejo"), precio: 25);
         push_back(&mut ganados, ganado2);
-        let ganado3 = *borrow(&ganados, i);
-        (ganado3.tipo, ganado3.precio)
+        let ganado3 = TipoGanado { tipo: utf8(b"Obeja"), precio: 40};
+        push_back(&mut ganados, ganado3);
+        let ganado4 = TipoGanado { tipo: utf8(b"Cabra"), precio: 60};
+        push_back(&mut ganados, ganado4);
+        let ganado5 = TipoGanado { tipo: utf8(b"Cerdo"), precio: 85};
+        push_back(&mut ganados, ganado5);
+        let ganado6 = TipoGanado { tipo: utf8(b"Pato"), precio: 135};
+        push_back(&mut ganados, ganado6);
+        let ganado7 = TipoGanado { tipo: utf8(b"Pavo"), precio: 160};
+        push_back(&mut ganados, ganado7);
+        let ganado8 = TipoGanado { tipo: utf8(b"Ganso"), precio: 185};
+        push_back(&mut ganados, ganado8);
+        let ganado9 = TipoGanado { tipo: utf8(b"Vaca"), precio: 210};
+        push_back(&mut ganados, ganado9);
+        let ganado10 = TipoGanado { tipo: utf8(b"Caballo"), precio: 250};
+        push_back(&mut ganados, ganado10);
+        let TipoGanado { tipo, precio } = *borrow(&ganados, i);
+        (tipo, precio)
     }
 
     // Inicializa la granja
