@@ -79,7 +79,7 @@ module cuenta::Granja {
         let ganados = empty<TipoGanado>();
         let ganado1 = TipoGanado { tipo: utf8(b"Gallina"), precio: 6};
         push_back(&mut ganados, ganado1);
-        let ganado2 =  utf8(b"Conejo"), precio: 25);
+        let ganado2 = TipoGanado { tipo: utf8(b"Conejo"), precio: 15};
         push_back(&mut ganados, ganado2);
         let ganado3 = TipoGanado { tipo: utf8(b"Obeja"), precio: 40};
         push_back(&mut ganados, ganado3);
