@@ -338,7 +338,7 @@ module cuenta::Granja {
     }
 
     // Aumenta el saldo y la energia de la granja cada 24 horas
-    public fun incremento_diario(s: &signer) acquires EstadoGranja {
+    public entry fun incremento_diario(s: &signer) acquires EstadoGranja {
         let granja = borrow_global_mut<EstadoGranja>(signer::address_of(s));
         granja.saldo = granja.saldo + 100;
         granja.energia = 100;
